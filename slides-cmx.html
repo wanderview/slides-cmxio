@@ -40,7 +40,6 @@
         <section>
           <h3>There's this webcomic...</h3>
           <img src="http://imgs.xkcd.com/comics/tar.png"/>
-          <a href="http://xkcd.com/1168/">xkcd.com/1168</a>
         </section>
         <section>
           <h3>And now you can program one!</h3>
@@ -50,85 +49,61 @@
         <section>
           <section>
             <h3>How does this work???</h3>
+            <ul>
+              <li>cmx.io provides CSS and JavaScript</li>
+              <li>You provide the HTML</li>
+            </ul>
           </section>
           <section>
-            <h3>Web Page Basics</h3>
-            <center>
-              <table width="75%">
-                <tr>
-                  <th>Structure:</th>
-                  <td class="fragment"><b>HTML</b></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th>Styling:</th>
-                  <td class="fragment"><b>CSS</b></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th>Logic:</th>
-                  <td class="fragment"><b>JavaScript</b></td>
-                  <td></td>
-                </tr>
-              </table>
-            </center>
+            <h3>HTML</h3>
+            <div>
+            Provides <b>STRUCTURE</b> and <b>CONTENT</b>
+            </div>
+            <pre><code>
+&lt;h1&gt;A list of things!&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;First this&lt;/li&gt;
+  &lt;li&gt;Then this&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
           </section>
           <section>
-            <h3>How cmx.io fits in</h3>
-            <center>
-              <table width="75%">
-                <tr>
-                  <th>Structure:</th>
-                  <td>HTML</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th>Styling:</th>
-                  <td>CSS</td>
-                  <td class="fragment"><b>cmx.io</b></td>
-                </tr>
-                <tr>
-                  <th>Logic:</th>
-                  <td>JavaScript</td>
-                  <td class="fragment"><b>cmx.io</b></td>
-                </tr>
-              </table>
-            </center>
+            <h3>CSS</h3>
+            <div>
+            Provides <b>STYLING</b>
+            </div>
+            <pre><code>
+code {
+  padding: 2px 4px;
+  color: #d14;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  white-space: nowrap;
+}
+            </code></pre>
           </section>
           <section>
-            <h3>What do you do?</h3>
-            <center>
-              <table width="75%">
-                <tr>
-                  <th>Structure:</th>
-                  <td>HTML</td>
-                  <td class="fragment"><b>YOU</b></td>
-                </tr>
-                <tr>
-                  <th>Styling:</th>
-                  <td>CSS</td>
-                  <td>cmx.io</td>
-                </tr>
-                <tr>
-                  <th>Logic:</th>
-                  <td>JavaScript</td>
-                  <td>cmx.io</td>
-                </tr>
-              </table>
-            </center>
+            <h3>JavaScript</h3>
+            <div>
+            Provides <b>LOGIC</b>
+            </div>
+            <pre><code>
+$('#option').select(function() {
+  alert('An option was selected!');
+});
+            </code></pre>
           </section>
         </section>
         <section>
           <h3>Let's play!</h3>
-          <div>
-          Copy the starter HTML from here:  <a href="https://gist.github.com/wanderview/4958277">gist.github.com</a>
-          </div>
-          <div class="fragment">
-          <b>In chrome:</b>  <a href="http://cmx.io/edit/">cmx.io/edit</a>
-          <div>
-          <small>(Not that compatible with Safari and Firefox yet...)</small>
-          </div>
-          </div>
+          <ul>
+            <li>
+            Copy the starter HTML from here:  <a href="https://gist.github.com/wanderview/4958277">gist.github.com</a>
+            </li>
+            <li>
+            <b>In chrome</b>, paste it over here:  <a href="http://cmx.io/edit/">cmx.io/edit</a>
+            </li>
+          </ul>
         </section>
         <section>
           <h3>Questions?</h3>
