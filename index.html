@@ -38,10 +38,12 @@
           <h3>Fun With Web Comics</h3>
           <small>
             <div>
-            <a href="http://coderdojodc.com/">CoderDojoDC</a> on March 16, 2013
+            <a target="_blank" href="http://coderdojodc.com/">CoderDojoDC</a>
+            on March 16, 2013
             </div>
             <div>
-            Presented by Ben Kelly (<a href="http://twitter.com/wanderview">@wanderview</a>)
+            Presented by
+            <a target="_blank" href="http://twitter.com/wanderview">Ben Kelly</a>
             </div>
           </small>
         </section>
@@ -52,64 +54,182 @@
         <section>
           <h3>And now you can program one!</h3>
           <img src="http://cmx.io/img/cmx-preview.png"/>
-          <a href="http://cmx.io">cmx.io</a> by Antonin Hildebrand
+          <a target="_blank" href="http://cmx.io">cmx.io</a> by
+          <a target="_blank" href="http://twitter.com/dr_win">Antonin Hildebrand</a>
         </section>
         <section>
           <section>
-            <h3>How does this work???</h3>
-            <ul>
-              <li>cmx.io provides CSS and JavaScript</li>
-              <li>You provide the HTML</li>
-            </ul>
+            <h3>Web Page Review</h3>
+            <div>
+            What are the three technologies used to create web pages?
+            </div>
           </section>
           <section>
             <h3>HTML</h3>
             <div>
             Provides <b>STRUCTURE</b> and <b>CONTENT</b>
             </div>
-            <pre><code>
-&lt;h1&gt;A list of things!&lt;/h1&gt;
+            <div>
+<pre><code>&lt;h4&gt;A list of things!&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;First this&lt;/li&gt;
   &lt;li&gt;Then this&lt;/li&gt;
-&lt;/ul&gt;
-</code></pre>
+&lt;/ul&gt;</code></pre>
+            </div>
+            <div class="fragment">
+              <hr/>
+              <div>
+                <h4>A list of things!</h4>
+                <ul>
+                  <li>First this</li>
+                  <li>Then this</li>
+                </ul>
+              </div>
+            </div>
           </section>
           <section>
             <h3>CSS</h3>
             <div>
             Provides <b>STYLING</b>
             </div>
+            <div>
             <pre><code>
-code {
-  padding: 2px 4px;
-  color: #d14;
-  background-color: #f7f7f9;
-  border: 1px solid #e1e1e8;
-  white-space: nowrap;
+li {
+  color:yellow;
 }
             </code></pre>
+            </div>
+            <div class="fragment">
+              <hr/>
+              <div>
+                <style scoped>
+                li { color:yellow; }
+                </style>
+                <h4>A list of things!</h4>
+                <ul>
+                  <li>First this</li>
+                  <li>Then this</li>
+                </ul>
+              </div>
+            </div>
           </section>
           <section>
             <h3>JavaScript</h3>
             <div>
             Provides <b>LOGIC</b>
             </div>
+            <div>
             <pre><code>
-$('#option').select(function() {
-  alert('An option was selected!');
-});
+var items = ['ex-first', 'ex-second'];
+var displays = [true, true];
+setInterval(function() {
+  var item = items.shift();
+  items.push(item);
+  var display = displays.shift();
+  displays.push(!display);
+  var attr = display ? 'list-item' : 'none';
+  window.document.getElementById(item).style.display = attr;
+}, 1000);
             </code></pre>
+            </div>
+            <div class="fragment" id="js-example">
+              <hr/>
+              <div>
+                <style scoped>
+                li { color:yellow; display:none }
+                </style>
+                <h4>A list of things!</h4>
+                <ul>
+                  <li id="ex-first">First this</li>
+                  <li id="ex-second">Then this</li>
+                </ul>
+              </div>
+            </div>
           </section>
         </section>
         <section>
-          <h3>Let's play!</h3>
+          <section>
+            <h3>cmx.io</h3>
+            <ul>
+              <li>cmx.io provides <b>CSS</b> and <b>JavaScript</b></li>
+              <li>You provide the structure with tags like HTML</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Scene</h3>
+            <div>
+<pre><code>&lt;scene id="name_of_the_scene"&gt;
+  &lt;-- Define what the scene is about in here! --&gt;
+&lt;/scene&gt;</code></pre>
+            </div>
+            <div class="fragment">
+              <hr/>
+              <img src="images/scene.png"/>
+            </div>
+          </section>
+          <section>
+            <h3>Actor</h3>
+            <div>
+<pre><code>&lt;scene id="name_of_the_scene"&gt;
+  &lt;actor t="translate(75,88)"&gt;
+    &lt;-- Define what the actor says here! --&gt;
+  &lt;/actor&gt;
+&lt;/scene&gt;</code></pre>
+            </div>
+            <div class="fragment">
+              <hr/>
+              <img src="images/actor.png"/>
+            </div>
+          </section>
+          <section>
+            <h3>Bubble</h3>
+            <div>
+<pre><code>&lt;scene id="name_of_the_scene"&gt;
+  &lt;actor t="translate(75,88)"&gt;
+    &lt;bubble&gt;
+      &lt;tspan&gt;Let's make a comic!&lt;/tspan&gt;
+    &lt;/bubble&gt;
+  &lt;/actor&gt;
+&lt;/scene&gt;</code></pre>
+            </div>
+            <div class="fragment">
+              <hr/>
+              <img src="images/bubble.png"/>
+            </div>
+          </section>
+          <section>
+            <h3>Positioning</h3>
+            <div>
+            How do I move things around?
+            </div>
+            <div class="fragment">
+            <hr/>
+            <div>
+            Remember that weird translate thing?
+            </div>
+<pre><code>&lt;actor t="translate(75,88)"&gt;</code></pre>
+            </div>
+            <div class="fragment">
+              <hr/>
+              <div>
+              Easier to use your mouse for this!
+              </div>
+              <img height="300" src="images/controls.png"/>
+            </div>
+          </section>
+        </section>
+        <section>
+          <h3>Let's try it!</h3>
           <ul>
             <li>
-            Copy the starter HTML from here:  <a href="https://gist.github.com/wanderview/4958277">gist.github.com</a>
+            In <b><u>Chrome</u></b>, open this URL:
+            <a target="_blank" href="http://cmx.io/edit/#4958277">http://cmx.io/edit/#4958277</a>
             </li>
             <li>
-            <b>In chrome</b>, paste it over here:  <a href="http://cmx.io/edit/">cmx.io/edit</a>
+            Follow along for one scene.
+            </li>
+            <li>
+            Make up your own ending!
             </li>
           </ul>
         </section>
@@ -146,6 +266,34 @@ $('#option').select(function() {
           // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
         ]
       });
+
+      var intervalId = null;
+
+      Reveal.addEventListener('fragmentshown', function(event) {
+        if (event.fragment.id !== 'js-example') {
+          return;
+        }
+        var items = ['ex-first', 'ex-second'];
+        var displays = [true, true];
+        intervalId = setInterval(function() {
+          var item = items.shift();
+          items.push(item);
+          var display = displays.shift();
+          displays.push(!display);
+          var attr = display ? 'list-item' : 'none';
+          window.document.getElementById(item).style.display = attr;
+        }, 1000);
+      });
+
+      var cancel = function() {
+        if (!intervalId) {
+          return;
+        }
+        clearInterval(intervalId);
+        intervalId = null;
+      }
+      Reveal.addEventListener('fragmenthidden', cancel);
+      Reveal.addEventListener('slidechanged', cancel);
 
     </script>
   </body>
